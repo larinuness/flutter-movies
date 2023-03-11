@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_movies/modules/splash/splash_module.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'app/bindings/app_bindings.dart';
 import 'firebase_options.dart';
+import 'modules/home/home_module.dart';
+import 'modules/login/login_module.dart';
 
 Future<void> main() async {
   //inicar o flutter antes de roda a aplicação
@@ -26,8 +29,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialBinding: AppBindings(),
       getPages: [
         ...SplashModule().routers,
+        ...LoginModule().routers,
+        ...HomeModule().routers,
       ],
     );
   }

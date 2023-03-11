@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:get/get.dart';
 
-class SplashPage extends StatelessWidget {
-  const SplashPage({Key? key}) : super(key: key);
+import 'login_controller.dart';
+
+class LoginPage extends GetView<LoginController> {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +35,20 @@ class SplashPage extends StatelessWidget {
                     fontSize: 20,
                     color: Colors.white,
                     fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: Get.width * .9,
+                height: 45,
+                child: SignInButton(Buttons.Google,
+                    text: "Logar com Gmail",
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(100)),
+                    onPressed: () {
+                  controller.login();
+                }),
               ),
             ],
           ),

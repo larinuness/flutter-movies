@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../app/modules/module.dart';
+import 'splash_binding.dart';
 import 'splash_page.dart';
 
 class SplashModule implements Module {
@@ -9,6 +10,7 @@ class SplashModule implements Module {
     GetPage(
       name: '/',
       page: () => const SplashPage(),
+      binding: SplashBiding(),
     )
   ];
 }
