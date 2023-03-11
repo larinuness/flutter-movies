@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>18622286589-8bgvifa218ibn1o1m006k21scl1tmmp3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.18622286589-8bgvifa218ibn1o1m006k21scl1tmmp3</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>18622286589-5j0rhvuup6m2et11dap1r2l4voi37hqr.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDtY0c8D4lnn0TX7eLaRbsfNhvT1H3FOEU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>18622286589</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.movies</string>
+	<key>PROJECT_ID</key>
+	<string>flutter-filmes-a0ef0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutter-filmes-a0ef0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:18622286589:ios:b15ad548b0f922560c0c94</string>
+</dict>
+</plist>
