@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:get/get.dart';
 
 import '../../app/ui/loader/loader_mixin.dart';

@@ -1,4 +1,4 @@
-import 'package:flutter_movies/app/auth/auth_service.dart';
+import '../auth/auth_service.dart';
 import 'package:get/get.dart';
 
 import '../../repositories/login/login_repository.dart';
@@ -9,6 +9,8 @@ import '../../services/login/login_services_impl.dart';
 class AppBindings implements Bindings {
   @override
   void dependencies() {
+    //fenix deixa a instanacia sempre ativa, só morre quando fecha o app
+    
     Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(), fenix: true);
 
     Get.lazyPut<LoginServices>(

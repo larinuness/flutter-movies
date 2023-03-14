@@ -25,7 +25,7 @@ class LoginPage extends GetView<LoginController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/movie_logo_128px.png'),
+              Image.asset('assets/images/movie_logo.png'),
               const SizedBox(
                 height: 20,
               ),

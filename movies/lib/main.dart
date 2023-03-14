@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/modules/splash/splash_module.dart';
+import 'package:flutter_movies/app/ui/filmes_app_ui_config.dart';
+import 'modules/splash/splash_module.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'app/bindings/app_bindings.dart';
@@ -25,10 +26,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: FilmesAppUiConfig.title,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: FilmesAppUiConfig.theme,
       initialBinding: AppBindings(),
       getPages: [
         ...SplashModule().routers,
