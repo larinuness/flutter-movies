@@ -3,7 +3,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import 'login_repository.dart';
 
-
 class LoginRepositoryImpl implements LoginRepository {
   @override
   Future<UserCredential> login() async {
@@ -22,6 +21,7 @@ class LoginRepositoryImpl implements LoginRepository {
     throw Exception("Erro ao realizar login com o google");
   }
 
+  //deslogado do firebase e do googlesign
   @override
   Future<void> logout() async {
     await GoogleSignIn().signOut();

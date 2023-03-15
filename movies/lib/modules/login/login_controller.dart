@@ -7,12 +7,12 @@ import '../../app/ui/messages/messagens_mixin.dart';
 import '../../services/login/login_services.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagensMixin {
-  final LoginServices _loginService;
+  final LoginService _loginService;
   final loaderRx = false.obs;
   final message = Rxn<MessageModel>();
 
   LoginController({
-    required LoginServices loginServices,
+    required LoginService loginServices,
   }) : _loginService = loginServices;
 
   @override

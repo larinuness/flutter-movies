@@ -10,10 +10,10 @@ class AppBindings implements Bindings {
   @override
   void dependencies() {
     //fenix deixa a instanacia sempre ativa, só morre quando fecha o app
-    
+
     Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(), fenix: true);
 
-    Get.lazyPut<LoginServices>(
+    Get.lazyPut<LoginService>(
         () => LoginServicesImpl(loginRepository: Get.find()),
         fenix: true);
 
