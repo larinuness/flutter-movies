@@ -43,7 +43,7 @@ class LoginPage extends GetView<LoginController> {
                 width: Get.width * .9,
                 height: 45,
                 child: SignInButton(Buttons.Google,
-                    text: "Logar com Gmail",
+                    text: "Logar com Google",
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100)),
                     onPressed: () {

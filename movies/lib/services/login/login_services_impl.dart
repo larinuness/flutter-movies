@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../repositories/login/login_repository.dart';
-import 'login_services.dart';
+import 'login_service.dart';
 
-class LoginServicesImpl implements LoginService {
+class LoginServiceImpl implements LoginService {
   final LoginRepository _loginRepository;
 
-  LoginServicesImpl({required LoginRepository loginRepository})
+  LoginServiceImpl({required LoginRepository loginRepository})
       : _loginRepository = loginRepository;
 
   @override

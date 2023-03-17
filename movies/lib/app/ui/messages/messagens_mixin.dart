@@ -1,23 +1,14 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-mixin MessagensMixin on GetxController {
+mixin MessagesMixin on GetxController {
   void messageListner(Rxn<MessageModel> message) {
-
     ever<MessageModel?>(message, (model) {
-
       if (model != null) {
-        Get.snackbar(
-          model.title,
-          model.message,
-          backgroundColor: model.type.color()
-          );
-      } else {
-      }
+        Get.snackbar(model.title, model.message,
+            backgroundColor: model.type.color());
+      } else {}
     });
-
   }
 }
 
@@ -46,17 +37,12 @@ class MessageModel {
 enum MessageType { error, info }
 
 extension MessageTypeExtension on MessageType {
-  
-  Color color () {
-
-    switch(this){
-
+  Color color() {
+    switch (this) {
       case MessageType.error:
         return Colors.red[200] ?? Colors.red;
       case MessageType.info:
         return Colors.green[200] ?? Colors.green;
-    
     }
-    
   }
 }

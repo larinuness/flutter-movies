@@ -2,7 +2,7 @@
 
 import 'package:get/get.dart';
 
-import '../../services/login/login_services.dart';
+import '../../services/login/login_service.dart';
 
 class HomeController extends GetxController {
   static const int NAVIGATOR_KEY = 1;

@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 import '../../app/ui/loader/loader_mixin.dart';
 import '../../app/ui/messages/messagens_mixin.dart';
-import '../../services/login/login_services.dart';
+import '../../services/login/login_service.dart';
 
-class LoginController extends GetxController with LoaderMixin, MessagensMixin {
+class LoginController extends GetxController with LoaderMixin, MessagesMixin {
   final LoginService _loginService;
   final loaderRx = false.obs;
   final message = Rxn<MessageModel>();

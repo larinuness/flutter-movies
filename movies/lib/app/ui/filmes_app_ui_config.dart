@@ -7,6 +7,7 @@ class FilmesAppUiConfig {
 
   static String get title => 'Filmes App';
   static ThemeData get theme => ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
           centerTitle: true,

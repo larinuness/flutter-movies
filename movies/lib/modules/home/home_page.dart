@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../movies/movies_binding.dart';
 import 'package:get/get.dart';
 
 import '../favorites/favorites_page.dart';
@@ -41,6 +42,7 @@ class HomePage extends GetView<HomeController> {
             return GetPageRoute(
               settings: settings,
               page: () => const MoviesPage(),
+              binding: MoviesBinding(),
             );
           }
           if (settings.name == "/favorites") {
