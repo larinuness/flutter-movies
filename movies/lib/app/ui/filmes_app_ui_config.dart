@@ -5,18 +5,20 @@ class FilmesAppUiConfig {
   //não deixa instancia a classe
   FilmesAppUiConfig._();
 
+  static Color blackPrimary = const Color(0xFF222222);
+
   static String get title => 'Filmes App';
   static ThemeData get theme => ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
+        appBarTheme:  AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
           systemOverlayStyle: SystemUiOverlayStyle.dark,
           titleTextStyle: TextStyle(
-              color: Color(0xFF222222),
+              color: blackPrimary,
               fontSize: 18,
               fontWeight: FontWeight.w500),
         ),

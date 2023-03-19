@@ -3,12 +3,12 @@ import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'app/ui/filmes_app_ui_config.dart';
-import 'modules/splash/splash_module.dart';
 import 'app/bindings/app_bindings.dart';
+import 'app/ui/filmes_app_ui_config.dart';
 import 'firebase_options.dart';
 import 'modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
+import 'modules/splash/splash_module.dart';
 
 Future<void> main() async {
   //inicar o flutter antes de roda a aplicação

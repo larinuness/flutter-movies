@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../movies/movies_binding.dart';
 import 'package:get/get.dart';
 
 import '../favorites/favorites_page.dart';
+import '../movies/movies_binding.dart';
 import '../movies/movies_page.dart';
 import 'home_controller.dart';
 
@@ -14,6 +14,7 @@ class HomePage extends GetView<HomeController> {
     return Scaffold(
       bottomNavigationBar: Obx(() {
         return BottomNavigationBar(
+          elevation: 0,
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.purple[300],
           onTap: controller.goToPage,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../app/ui/filmes_app_ui_config.dart';
 import '../../../models/genre_model.dart';
 
 class FilterTag extends StatelessWidget {
@@ -14,21 +15,26 @@ class FilterTag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(5),
-      constraints: const BoxConstraints(minWidth: 100, maxHeight: 30),
-      decoration: BoxDecoration(
-        color: Colors.purple[300],
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Align(
-        alignment: Alignment.center,
-        child: Text(
-          model.name,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
+    return InkWell(
+      onTap: onPressed,
+      borderRadius: BorderRadius.circular(30),
+      child: Container(
+        margin: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
+        constraints: const BoxConstraints(minWidth: 100, maxHeight: 30),
+        decoration: BoxDecoration(
+          color: selected ? Colors.purple[300] : Colors.grey.withOpacity(0.3),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Align(
+          alignment: Alignment.center,
+          child: Text(
+            model.name,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: selected ? Colors.white : FilmesAppUiConfig.blackPrimary,
+              fontSize: 14,
+            ),
           ),
         ),
       ),

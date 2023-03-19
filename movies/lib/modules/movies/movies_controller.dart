@@ -29,7 +29,6 @@ class MoviesController extends GetxController with MessagesMixin {
 
       genres.assignAll(genresData);
     } catch (e) {
-      print(e.toString());
       _message(MessageModel.error(
           title: 'Erro', message: 'Erro ao buscar generos '));
     }
