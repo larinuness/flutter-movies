@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class MovieModel {
   final int id;
   final String title;
@@ -20,9 +18,9 @@ class MovieModel {
     return {
       'id': id,
       'title': title,
-      'releaseDate': releaseDate,
-      'posterPath': posterPath,
-      'genres': genres,
+      'release_date': releaseDate,
+      'poster_path': posterPath,
+      'genre_ids': genres,
       'favorite': favorite,
     };
   }
@@ -31,15 +29,10 @@ class MovieModel {
     return MovieModel(
       id: int.tryParse('id') ?? 0,
       title: map['title'] ?? '',
-      releaseDate: map['releaseDate'] ?? '',
-      posterPath: map['posterPath'] ?? '',
-      genres: List<int>.from(map['genres']),
+      releaseDate: map['release_date'] ?? '',
+      posterPath: 'https://image.tmdb.org/t/p/w200/${map['poster_path']}',
+      genres: List<int>.from(map['genre_ids']),
       favorite: map['favorite'] ?? false,
     );
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory MovieModel.fromJson(String source) =>
-      MovieModel.fromMap(json.decode(source));
 }

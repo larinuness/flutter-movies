@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+import '../../../models/movie_model.dart';
 
 class MovieCard extends StatelessWidget {
-  const MovieCard({Key? key}) : super(key: key);
+  final date = DateFormat('y');
+  final MovieModel movie;
+  MovieCard({Key? key, required this.movie}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,7 @@ class MovieCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   clipBehavior: Clip.antiAlias,
                   child: Image.network(
-                    'https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/92/91/32/20224832.jpg',
+                    movie.posterPath,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -29,15 +34,16 @@ class MovieCard extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                'Senhor dos Anéis',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+              Text(
+                movie.title,
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
               ),
-              const Text(
-                '2001',
-                style: TextStyle(fontSize: 12, color: Colors.grey),
+              Text(
+                date.format(DateTime.parse(movie.releaseDate)),
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
               ),
@@ -46,7 +52,8 @@ class MovieCard extends StatelessWidget {
           Positioned(
             bottom: 70,
             right: -3,
-            child: GestureDetector(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(30),
               onTap: () {},
               child: Card(
                   elevation: 5,
