@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../../../models/movie_model.dart';
 
@@ -20,17 +21,16 @@ class MovieCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Material(
-                elevation: 2,
-                borderRadius: BorderRadius.circular(20),
-                child: ClipRRect(
+                  elevation: 2,
                   borderRadius: BorderRadius.circular(20),
-                  clipBehavior: Clip.antiAlias,
-                  child: Image.network(
-                    movie.posterPath,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    clipBehavior: Clip.antiAlias,
+                    child: FadeInImage.memoryNetwork(
+                      placeholder: kTransparentImage,
+                      image: movie.posterPath,
+                    ),
+                  )),
               const SizedBox(
                 height: 20,
               ),

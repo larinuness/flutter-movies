@@ -20,7 +20,8 @@ dependencies:
   get: ^4.6.5
   google_fonts: ^4.0.3
   google_sign_in: ^6.0.2
-  intl: ^0.18.0
+  intl: ^0.17.0
+  transparent_image: ^2.0.1
 
 
 dev_dependencies:
