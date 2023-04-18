@@ -13,7 +13,9 @@ class MovieDetailPage extends GetView<MovieDetailController> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Text('')
+          ],
         ),
       ),
     );
