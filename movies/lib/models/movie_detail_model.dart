@@ -1,4 +1,3 @@
-
 import 'cast_model.dart';
 import 'genre_model.dart';
 
@@ -24,25 +23,34 @@ class MovieDetailModel {
     required this.cast,
   });
 
-
   factory MovieDetailModel.fromMap(Map<String, dynamic> map) {
-    final urlImagesPosters = map['images']['posters'];
-
-    final urlImages =
-        urlImagesPosters.map<String>((i) => i['file_path']).toList() ?? [];
+    var urlImagesPoster = map['images']['posters'];
+    var urlImages = urlImagesPoster
+            ?.map<String>((images) =>
+                'https://image.tmdb.org/t/p/w200${images['file_path']}')
+            .toList() ??
+        const [];
 
     return MovieDetailModel(
       title: map['title'] ?? '',
-      stars: map['vote_average']?.toDouble() ?? 0.0,
+      stars: map['vote_average'] ?? 0.0,
       genres: List<GenreModel>.from(
-          map['genres']?.map((x) => GenreModel.fromMap(x))),
+        map['genres']?.map(
+              (genre) => GenreModel.fromMap(genre),
+            ) ??
+            const [],
+      ),
       urlImages: urlImages,
       releaseDate: DateTime.parse(map['release_date']),
       overview: map['overview'] ?? '',
-      productionCompanies: List<dynamic>.from(map['production_companies']).map<String>((e) => map['name']).toList(),
+      productionCompanies: List<dynamic>.from(
+        map['production_companies'] ?? const [],
+      ).map<String>((production) => production['name']).toList(),
       originalLanguage: map['original_language'] ?? '',
-      cast: List<CastModel>.from(map['credits']['cast']?.map((x) => CastModel.fromMap(x))),
+      cast: List<CastModel>.from(
+        map['credits']['cast']?.map((credit) => CastModel.fromMap(credit)) ??
+            const [],
+      ),
     );
   }
-
 }
