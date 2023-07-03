@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../app/ui/loader/loader_mixin.dart';
@@ -22,14 +23,26 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
     messageListner(message);
   }
 
-  Future<void> login() async {
+  Future<void> login(context) async {
     try {
       loaderRx(true);
 
       await _loginService.login();
       loaderRx(false);
-      message(MessageModel.info(
-          title: "Sucesso", message: "Login Realizado Com Sucesso"));
+      // message(MessageModel.info(
+      //     title: "Sucesso", message: "Login Realizado Com Sucesso"));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: const Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24),
+          ),
+          content: const Text(
+            'Login realizado com sucesso',
+          ),
+        ),
+      );
     } catch (e, s) {
       print(e);
       print(s);

@@ -47,7 +47,7 @@ class LoginPage extends GetView<LoginController> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100)),
                     onPressed: () {
-                  controller.login();
+                  controller.login(context);
                 }),
               ),
             ],

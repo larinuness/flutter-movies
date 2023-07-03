@@ -13,14 +13,14 @@ dependencies:
   dio: ^5.0.2
   firebase_auth: ^4.2.10
   firebase_core: ^2.7.1
-  firebase_remote_config: ^3.0.14
+  firebase_remote_config: ^4.2.3
   flutter:
     sdk: flutter
   flutter_signin_button: ^2.0.0
   get: ^4.6.5
   google_fonts: ^4.0.3
   google_sign_in: ^6.0.2
-  intl: ^0.17.0
+  intl: ^0.18.1
   transparent_image: ^2.0.1
 
 
