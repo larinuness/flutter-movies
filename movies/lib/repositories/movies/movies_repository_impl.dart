@@ -57,7 +57,9 @@ class MoviesRepositoryImpl implements MoviesRepository {
         queryParameters: {
           'api_key': FirebaseRemoteConfig.instance.getString('api_token'),
           'language': 'pt-br',
+          //manda como parametro
           'append_to_response': 'images,credits',
+          //acha as imagens em ingles e pt
           'include_image_language': 'en,pt-br',
         },
       );

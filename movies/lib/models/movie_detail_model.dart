@@ -43,6 +43,7 @@ class MovieDetailModel {
       urlImages: urlImages,
       releaseDate: DateTime.parse(map['release_date']),
       overview: map['overview'] ?? '',
+      //pega o nome dentro do map 
       productionCompanies: List<dynamic>.from(
         map['production_companies'] ?? const [],
       ).map<String>((production) => production['name']).toList(),
