@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie_model.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import '../../../app/ui/components/movie_card.dart';
+import '../../../app/ui/widgets/movie_card.dart';
 
 class MoviesGroup extends StatelessWidget {
   final String title;
