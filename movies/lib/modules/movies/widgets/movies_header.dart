@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/modules/movies/movies_controller.dart';
 import 'package:get/get.dart';
+
+import '../movies_controller.dart';
 
 class MoviesHeader extends GetView<MoviesController> {
   const MoviesHeader({Key? key}) : super(key: key);

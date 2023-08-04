@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/modules/movie_detail/widgets/movie_detail_content/movie_cast.dart';
+import 'package:get/get.dart';
+
 import '../../../../app/ui/theme_extension.dart';
 import '../../../../models/movie_detail_model.dart';
-import 'package:get/get.dart';
+import 'movie_cast.dart';
 
 class MovieDetailContentCasters extends StatelessWidget {
   final MovieDetailModel? movie;

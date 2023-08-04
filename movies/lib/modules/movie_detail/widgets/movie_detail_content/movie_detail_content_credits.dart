@@ -11,10 +11,10 @@ class MovieDetailContentCredits extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: 50),
+        constraints: const BoxConstraints(minHeight: 50),
         child: Text(
           movie?.overview ?? '',
-          style: TextStyle(fontSize: 14, height: 1.3),
+          style: const TextStyle(fontSize: 14, height: 1.3),
         ),
       ),
     );

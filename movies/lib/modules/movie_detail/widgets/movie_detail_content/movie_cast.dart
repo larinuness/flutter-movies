@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/app/ui/theme_extension.dart';
-import 'package:flutter_movies/models/cast_model.dart';
+
+import '../../../../app/ui/theme_extension.dart';
+import '../../../../models/cast_model.dart';
 
 class MovieCast extends StatelessWidget {
   final CastModel? cast;
@@ -10,7 +11,7 @@ class MovieCast extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 95,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +26,7 @@ class MovieCast extends StatelessWidget {
           ),
           Text(
             cast?.name ?? '',
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
           ),
           Text(
             cast?.character ?? '',

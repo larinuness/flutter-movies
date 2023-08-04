@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/modules/movie_detail/widgets/movie_detail_content/movie_detail_content_casters.dart';
 
 import '../../../../models/movie_detail_model.dart';
+import 'movie_detail_content_casters.dart';
 import 'movie_detail_content_company.dart';
 import 'movie_detail_content_credits.dart';
 import 'movie_detail_content_title.dart';

@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_movies/modules/movie_detail/movie_detail_module.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'app/bindings/app_bindings.dart';
@@ -9,6 +8,7 @@ import 'app/ui/filmes_app_ui_config.dart';
 import 'firebase_options.dart';
 import 'modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
+import 'modules/movie_detail/movie_detail_module.dart';
 import 'modules/splash/splash_module.dart';
 
 Future<void> main() async {
