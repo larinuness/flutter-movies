@@ -34,6 +34,6 @@ class AppBindings implements Bindings {
             ),
         fenix: true);
 
-    Get.put(AuthServices()).init();
+    Get.put(AuthService()).init();
   }
 }

@@ -4,11 +4,14 @@ import 'package:intl/intl.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 import '../../../models/movie_model.dart';
+import '../theme_extension.dart';
 
 class MovieCard extends StatelessWidget {
   final date = DateFormat('y');
   final MovieModel movie;
-  MovieCard({Key? key, required this.movie}) : super(key: key);
+  final VoidCallback favoriteCallback;
+  MovieCard({Key? key, required this.movie, required this.favoriteCallback})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class MovieCard extends StatelessWidget {
       },
       child: Container(
         padding: const EdgeInsets.all(5),
-        height: 280,
+        height: 300,
         width: 148,
         child: Stack(
           children: [
@@ -37,7 +40,8 @@ class MovieCard extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       child: FadeInImage.memoryNetwork(
                         placeholder: kTransparentImage,
-                        image: movie.posterPath,
+                        image:
+                            'https://image.tmdb.org/t/p/w200/${movie.posterPath}',
                       ),
                     )),
                 const SizedBox(
@@ -48,7 +52,7 @@ class MovieCard extends StatelessWidget {
                   style: const TextStyle(
                       fontSize: 14, fontWeight: FontWeight.w600),
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
+                  maxLines: 1,
                 ),
                 Text(
                   date.format(DateTime.parse(movie.releaseDate)),
@@ -63,16 +67,19 @@ class MovieCard extends StatelessWidget {
               right: -3,
               child: InkWell(
                 borderRadius: BorderRadius.circular(30),
-                onTap: () {},
+                onTap: favoriteCallback,
                 child: Card(
-                    elevation: 5,
+                    color: Colors.white,
+                    elevation: 2,
                     shape: const CircleBorder(),
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Icon(
                         Icons.star,
                         size: 20,
-                        color: Colors.grey[400],
+                        color: movie.favorite
+                            ? context.themeOrange
+                            : Colors.grey[400],
                       ),
                     )),
               ),

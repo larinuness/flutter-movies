@@ -3,8 +3,9 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 
 import '../../../app/ui/widgets/movie_card.dart';
 import '../../../models/movie_model.dart';
+import '../movies_controller.dart';
 
-class MoviesGroup extends StatelessWidget {
+class MoviesGroup extends GetView<MoviesController> {
   final String title;
   final List<MovieModel> movies;
   const MoviesGroup({Key? key, required this.title, required this.movies})
@@ -36,6 +37,8 @@ class MoviesGroup extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return MovieCard(
                       movie: movies[index],
+                      favoriteCallback: () =>
+                          controller.favoriteMovies(movies[index]),
                     );
                   },
                 );
